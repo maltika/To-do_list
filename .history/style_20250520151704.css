@@ -156,7 +156,7 @@ ul li span:hover{
     background-color: #dcdbdb;
 }
 
-@media {
+@media  {
   .todo-app {
     margin: 50px 20px; /* เว้นขอบซ้าย-ขวา 20px */
     padding: 30px 20px 60px;

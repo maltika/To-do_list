@@ -156,14 +156,9 @@ ul li span:hover{
     background-color: #dcdbdb;
 }
 
-@media {
-  .todo-app {
-    margin: 50px 20px; /* เว้นขอบซ้าย-ขวา 20px */
-    padding: 30px 20px 60px;
-    width: auto;
-    max-width: 360px;
-    box-sizing: border-box;
-  }
+@media (max-width: 500px) {
+    .todo-app {
+        padding: 50px 20px 60px; /* เพิ่ม padding ซ้าย-ขวา */
+        margin: 50px 15px;       /* เพิ่ม margin ซ้าย-ขวา */
+    }
 }
-
-

@@ -15,14 +15,14 @@ body {
     font-family: sans-serif;
 }
 
-.content {
+/* .content {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     /* text-align: center; */
     color: #333;
-}
+} */
 
 * {
     margin: 0;
@@ -35,7 +35,7 @@ body {
     width: 100%;
     max-width: 460px;
     background-color: #fff;
-    margin: 100px auto;
+    margin: 100px auto px;
     padding: 40px 30px 70px;
     border-radius: 10px;
     border-color: #A6A6A6;
@@ -155,15 +155,4 @@ ul li span {
 ul li span:hover{
     background-color: #dcdbdb;
 }
-
-@media {
-  .todo-app {
-    margin: 50px 20px; /* เว้นขอบซ้าย-ขวา 20px */
-    padding: 30px 20px 60px;
-    width: auto;
-    max-width: 360px;
-    box-sizing: border-box;
-  }
-}
-
 

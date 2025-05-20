@@ -33,7 +33,7 @@ body {
 
 .todo-app {
     width: 100%;
-    max-width: 460px;
+    max-width: 360px;
     background-color: #fff;
     margin: 100px auto;
     padding: 40px 30px 70px;
@@ -156,12 +156,11 @@ ul li span:hover{
     background-color: #dcdbdb;
 }
 
-@media {
+@media (max-width: 600px) {
   .todo-app {
     margin: 50px 20px; /* เว้นขอบซ้าย-ขวา 20px */
     padding: 30px 20px 60px;
     width: auto;
-    max-width: 360px;
     box-sizing: border-box;
   }
 }
