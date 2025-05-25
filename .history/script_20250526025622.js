@@ -17,7 +17,7 @@ function addTask() {
     saveData();
 }
 
-//Click for checked
+
 listContainer.addEventListener("click", function (e) {
     if (e.target.tagName === "LI") {
         e.target.classList.toggle("checked");
@@ -28,7 +28,7 @@ listContainer.addEventListener("click", function (e) {
     }
 }, false);
 
-//double-click for edit
+
 listContainer.addEventListener("dblclick", function (e) {
     if (e.target.tagName === "LI") {
         if (e.target.classList.contains("checked")) return;
