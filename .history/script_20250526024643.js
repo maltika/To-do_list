@@ -1,0 +1,52 @@
+const inputBox = document.getElementById("input-box")
+const listContainer = document.getElementById("list-container")
+
+function addTask() {
+    if (inputBox.value === '') {
+        alert("You must write something!");
+    }
+    else {
+        let li = document.createElement("li");
+        li.innerHTML = inputBox.value;
+        listContainer.appendChild(li);
+        let span = document.createElement("span");
+        span.innerHTML = "\u00d7";
+        li.appendChild(span)
+    }
+    inputBox.value = "";
+    saveData();
+}
+
+listContainer.addEventListener("click", function (e) {
+    if(e.target.tagName === "LI") {
+        if(e.target.classList.toggle("checked")) return;
+
+        let currentText = e.target.firstChild.textContent.trim();
+        let input = document.createElement("input");
+        input.type = "text";
+        input.value = currentText;
+        input.style.width = "80%";
+        e.target.innerHTML = "";
+        e.target.appendChild(input);
+        input.focus();
+
+        input.addEventListener("blur", () =>{
+            if(input.value.trim() !==)
+        })
+
+        saveData();
+    }
+    else if(e.target.tagName === "SPAN") {
+        e.target.parentElement.remove();
+        saveData();
+    }
+}, false);
+
+function saveData(){
+    localStorage.setItem("data" , listContainer.innerHTML);
+}
+
+function showTask(){
+    listContainer.innerHTML = localStorage.getItem("data");
+}
+showTask();

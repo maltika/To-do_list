@@ -166,10 +166,5 @@ ul li span:hover{
   }
 }
 
-li input[type="text"] {
-  all: unset; /* ล้าง style ที่ browser ใส่มาเอง */
-  font: inherit; /* ใช้ font เดียวกับ li เดิม */
-  width: 100%;
-}
 
 

@@ -167,9 +167,12 @@ ul li span:hover{
 }
 
 li input[type="text"] {
-  all: unset; /* ล้าง style ที่ browser ใส่มาเอง */
-  font: inherit; /* ใช้ font เดียวกับ li เดิม */
-  width: 100%;
+  font-size: 16px;
+  padding: 4px 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: calc(100% - 30px); /* เผื่อพื้นที่ของปุ่มลบ (×) */
+  box-sizing: border-box;
 }
 
 

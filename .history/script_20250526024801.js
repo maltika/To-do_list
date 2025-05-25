@@ -17,54 +17,36 @@ function addTask() {
     saveData();
 }
 
-// ✅ click สำหรับเช็คหรือปิด
 listContainer.addEventListener("click", function (e) {
-    if (e.target.tagName === "LI") {
-        e.target.classList.toggle("checked");
-        saveData();
-    } else if (e.target.tagName === "SPAN") {
-        e.target.parentElement.remove();
-        saveData();
-    }
-}, false);
-
-// ✅ double-click สำหรับแก้ไข
-listContainer.addEventListener("dblclick", function (e) {
-    if (e.target.tagName === "LI") {
-        if (e.target.classList.contains("checked")) return;
+    if(e.target.tagName === "LI") {
+        if(e.target.classList.toggle("checked")) return;
 
         let currentText = e.target.firstChild.textContent.trim();
         let input = document.createElement("input");
         input.type = "text";
         input.value = currentText;
-        input.style.all = "unset";
-        input.style.font = "inherit";
-        input.style.width = "100%";
-
+        input.style.width = "80%";
         e.target.innerHTML = "";
         e.target.appendChild(input);
         input.focus();
 
-        input.addEventListener("blur", () => {
-            if (input.value.trim() !== "") {
+        input.addEventListener("blur", () =>{
+            if(input.value.trim() !== ""){
                 e.target.innerHTML = input.value;
                 let span = document.createElement("span");
                 span.innerHTML = "\u00d7";
                 e.target.appendChild(span);
-                saveData();
-            } else {
-                e.target.remove();
-                saveData();
+                saveData()
             }
-        });
+        })
 
-        input.addEventListener("keydown", (event) => {
-            if (event.key === "Enter") {
-                input.blur();
-            }
-        });
+        saveData();
     }
-});
+    else if(e.target.tagName === "SPAN") {
+        e.target.parentElement.remove();
+        saveData();
+    }
+}, false);
 
 function saveData(){
     localStorage.setItem("data" , listContainer.innerHTML);
